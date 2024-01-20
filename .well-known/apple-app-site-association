@@ -4,7 +4,8 @@
 			"appIDs": [ "XGQG375A3K.acebit.passworddepot.14" ],
 			"components": [
 				{
-					"/": "/ios_app/"
+					"/": "",
+					"#": "ios-??"
 				}
 			]
 		]
