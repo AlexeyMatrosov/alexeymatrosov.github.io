@@ -1,9 +1,11 @@
 {
 	"applinks": {
 		"details": [
-			"appID": "XGQG375A3K.acebit.passworddepot.14",
-			"paths": [
-				"/ios_app/"
+			"appIDs": [ "XGQG375A3K.acebit.passworddepot.14" ],
+			"components": [
+				{
+					"/": "/ios_app/"
+				}
 			]
 		]
 	} 
