@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "de.acebit.passworddepot",
+    "sha256_cert_fingerprints":
+    ["46:71:A3:16:96:E7:FC:71:EE:43:E5:A7:16:81:F1:A7:35:44:7E:3E:BE:42:26:4C:5D:00:C0:44:86:1A:30:8F"]
+  }
+}]
