@@ -1,9 +1,20 @@
-[{
+[
+  {
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target": {
     "namespace": "android_app",
     "package_name": "de.acebit.passworddepot",
     "sha256_cert_fingerprints":
     ["11:B1:ED:2E:FB:05:5A:05:7B:D8:07:EE:2C:14:39:21:3A:E7:44:D5:3C:B7:04:20:70:0E:9E:3F:06:B1:CD:42"]
-  }
-}]
+    }
+  },
+  {
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.mercedesbenzgroup.passworddepot.internal.android",
+    "sha256_cert_fingerprints":
+    ["11:B1:ED:2E:FB:05:5A:05:7B:D8:07:EE:2C:14:39:21:3A:E7:44:D5:3C:B7:04:20:70:0E:9E:3F:06:B1:CD:42"]
+    }
+  },
+]
