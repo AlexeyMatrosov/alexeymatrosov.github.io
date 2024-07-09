@@ -9,10 +9,12 @@ document.getElementById('getCodeButton').addEventListener('click', function() {
     const params = new URLSearchParams(hash.substring(1));
     const code = params.get('code');
 
-    // Отобразить код
-    if (code) {
-        document.getElementById('codeDisplay').textContent = `Code: ${code}`;
-    } else {
-        document.getElementById('codeDisplay').textContent = 'Code not found';
-    }
+    document.getElementById('codeDisplay').textContent = `URL: ${currentUrl}`;
+
+    // // Отобразить код
+    // if (code) {
+    //     document.getElementById('codeDisplay').textContent = `Code: ${currentUrl}`;
+    // } else {
+    //     document.getElementById('codeDisplay').textContent = 'Code not found';
+    // }
 });
