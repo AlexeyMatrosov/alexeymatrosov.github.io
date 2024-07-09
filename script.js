@@ -2,14 +2,16 @@ document.getElementById('getCodeButton').addEventListener('click', function() {
     // Получить текущий URL
     const currentUrl = window.location.href;
 
-    // Получить хеш из URL
-    const hash = window.location.hash;
+    window.open(currentUrl);
 
-    // Извлечь код из хеша
-    const params = new URLSearchParams(hash.substring(1));
-    const code = params.get('code');
+    // // Получить хеш из URL
+    // const hash = window.location.hash;
 
-    document.getElementById('codeDisplay').textContent = `URL: ${currentUrl}`;
+    // // Извлечь код из хеша
+    // const params = new URLSearchParams(hash.substring(1));
+    // const code = params.get('code');
+
+    // document.getElementById('codeDisplay').textContent = `URL: ${currentUrl}`;
 
     // // Отобразить код
     // if (code) {
