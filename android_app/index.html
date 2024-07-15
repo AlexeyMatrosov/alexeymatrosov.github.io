@@ -57,20 +57,20 @@
         }
     </style>
 
-    <script type="text/javascript">
-        function openCurrentUrl() {
-            const currentUrl = window.location.href;
-            window.open(currentUrl);
-        }
-    </script>
-
 </head>
 <body>
     <div class="container">
         <img src="success.svg" alt="Icon" class="icon">
         <h1>Success!</h1>
         <div class="secondary-text">Secondary text with explanation</div>
-        <button class="button" onclick="if (!window.__cfRLUnblockHandlers) return false; openCurrentUrl()">Back to App</button>
+        <button class="button" id="backToAppButton">Back to App</button>
     </div>
+
+    <script>
+        document.getElementById('backToAppButton').addEventListener('click', function() {
+            const currentUrl = window.location.href;
+            window.open(currentUrl);
+        });
+    </script>
 </body>
 </html>
