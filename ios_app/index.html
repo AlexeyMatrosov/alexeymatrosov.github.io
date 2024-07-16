@@ -69,10 +69,13 @@
     <script>
         document.getElementById('backToAppButton').addEventListener('click', function() {
             const currentUrl = window.location.href;
-            const url = new URL(currentUrl);
 
-            url.hostname = 'password-depot.de';
-            url.protocol = 'oidc.acebit:';
+            const hashIndex = currentUrl.indexOf('#');
+            const hashData = hashIndex !== -1 ? currentUrl.substring(hashIndex) : '';
+
+            const newProtocol = 'oidc.acebit';
+            const newHost = 'password-depot.de';
+            const newUrl = `${newProtocol}://${newHost}/${hashData}`;
 
             window.open(url.href);
         });
