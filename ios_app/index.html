@@ -64,7 +64,7 @@
         <h1>Success!</h1>
         <div class="secondary-text">You have been successfully logged in!</div>
         <button class="button" id="backToAppButton">Back to App</button>
-        <p>Нажмите на ссылку, чтобы перейти на <a href="oidc.acebit://password-depot.de/">Example.com</a>.</p>
+        <p>Нажмите на ссылку, чтобы перейти на <a href="https://google.com/" onclick="myFunction(event)">Example.com</a>.</p>
     </div>
 
     <script>
@@ -82,6 +82,12 @@
             window.open(newUrl.href);
             //window.location.href = newUrl.href;
         });
+
+        function myFunction(event) {
+            //alert("Ссылка нажата!");
+            event.preventDefault(); // Предотвращает переход по ссылке
+            window.location.href = "oidc.acebit://password-depot.de/"; // Переход на другой URL
+        }
     </script>
 </body>
 </html>
