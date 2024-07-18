@@ -33,27 +33,31 @@
             border-radius: 50%;
         }
         h1 {
-            color: black; /* Черный цвет для заголовка */
+            color: black;
             margin: 10px 0;
         }
         .secondary-text {
             color: gray;
             margin-bottom: 40px;
         }
-        .button {
-            background-color: #0F4C81;
-            color: white;
+
+        .button-link {
+            display: inline-block;
             padding: 15px 32px;
-            text-align: center;
             font-size: 16px;
+            color: white;
+            background-color: #0F4C81;
             border: none;
             border-radius: 5px;
-            width: 100%;
+            text-align: center;
+            text-decoration: none;
             cursor: pointer;
             max-width: 260px;
+            font-size: 16px;
         }
-        .button:focus {
-            outline: none;
+
+        .button-link:hover {
+            background-color: #0056b3;
         }
     </style>
 
@@ -63,36 +67,18 @@
         <img src="success.svg" alt="Icon" class="icon">
         <h1>Success!</h1>
         <div class="secondary-text">You have been successfully logged in!</div>
-        <button class="button" id="backToAppButton">Back to App</button>
-        <p>Нажмите на ссылку 4, чтобы перейти на <a href="https://google.com/" onclick="myFunction(event)">Example.com</a>.</p>
+        <a class="button-link" href="https://google.com/" onclick="myFunction(event)">Back to App</a>
     </div>
 
     <script>
-        document.getElementById('backToAppButton').addEventListener('click', function() {
-            const currentUrl = window.location.href;
-
-            const hashIndex = currentUrl.indexOf('#');
-            const hashData = hashIndex !== -1 ? currentUrl.substring(hashIndex) : '';
-
-            const newProtocol = 'oidc.acebit';
-            const newHost = 'password-depot.de';
-            const newUrl = `${newProtocol}://${newHost}/${hashData}`;
-
-            //console.log(newUrl);
-            window.open(newUrl.href);
-            //window.location.href = newUrl.href;
-            window.location.href = 'oidc.acebit://password-depot.de/' + hashData ; // Переход на другой URL
-        });
-
         function myFunction(event) {
             const currentUrl = window.location.href;
 
             const hashIndex = currentUrl.indexOf('#');
             const hashData = hashIndex !== -1 ? currentUrl.substring(hashIndex) : '';
 
-            //alert("Ссылка нажата!");
-            event.preventDefault(); // Предотвращает переход по ссылке
-            window.location.href = 'oidc.acebit://password-depot.de/' + hashData ; // Переход на другой URL
+            event.preventDefault();
+            window.location.href = 'oidc.acebit://password-depot.de/' + hashData ;
         }
     </script>
 </body>
